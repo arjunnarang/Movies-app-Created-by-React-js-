@@ -1,0 +1,45 @@
+.movie-page{
+    height: calc( 100vh - 80px );
+    position: relative;
+}
+
+.movie-page-poster{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.movie-page-poster img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.movie-page-details{
+    color: white;
+    position: absolute;
+    top: 0px;
+    padding: 40px;
+}
+.movie-trailer{
+    height: 100%;
+    width: 100%;
+}
+.movie-trailer div{
+    background-color: white;
+    height: 40%;
+    width: 100%;
+}
+
+.favourite-movies {
+    display: flex;
+    width: 120px;
+    height: 43px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    float: right;
+    cursor: pointer;
+    /* color:white; */
+}
