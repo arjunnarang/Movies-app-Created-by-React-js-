@@ -5,7 +5,7 @@ import axios from 'axios';
 import Pagination from './components/Pagination/Pagination';
 import { API_KEY, API_URL } from './API/secret';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Favourite from './components/Favourite/Favourite';
+import Favourite from './components/Favourites/Favourites';
 import Moviepage from './components/Moviepage/Moviepage';
 class App extends Component {
 	
@@ -88,7 +88,7 @@ class App extends Component {
 		favMovieObj.isFav = isFav;
 		
 		let favMovies = [];
-		if(isFav == true){
+		if(isFav == true){  
 			favMovies = [...this.state.favMovies, favMovieObj];
 		}
 		else{
@@ -115,7 +115,7 @@ class App extends Component {
 						<Pagination pages={this.state.pages} currPage={this.state.currPage} nextPage={this.nextPage} prevPage={this.prevPage} setPage={this.setPage}></Pagination>
 					</Route>
 					<Route path="/favourites" exact>
-						<Favourite></Favourite>
+						<Favourite favMovies={this.state.favMovies}></Favourite>
 					</Route>
 					<Route path="/moviepage" exact component={Moviepage}>
 						
