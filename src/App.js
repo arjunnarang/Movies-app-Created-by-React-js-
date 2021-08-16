@@ -115,7 +115,7 @@ class App extends Component {
 						<Pagination pages={this.state.pages} currPage={this.state.currPage} nextPage={this.nextPage} prevPage={this.prevPage} setPage={this.setPage}></Pagination>
 					</Route>
 					<Route path="/favourites" exact>
-						<Favourite favMovies={this.state.favMovies}></Favourite>
+						<Favourite favMovies={this.state.favMovies} setFavMovie={this.setFavMovie}></Favourite>
 					</Route>
 					<Route path="/moviepage" exact component={Moviepage}>
 						

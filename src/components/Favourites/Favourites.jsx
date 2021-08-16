@@ -6,10 +6,10 @@ class Favourite extends Component {
 
     render() { 
         let favMovies = this.props.favMovies;
-       
+        let setFavMovie = this.props.setFavMovie;
         return ( <div className="fav-movies">
             {favMovies.map((movie) => {
-                return <FavMovie key={movie.id} favMovie={movie}></FavMovie>
+                return <FavMovie key={movie.id} favMovie={movie} setFavMovie={setFavMovie}></FavMovie>
             })}
         </div> );
     }
